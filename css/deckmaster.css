@@ -9,7 +9,7 @@
   text-indent: -100em;
   overflow: hidden;
   padding: 0;
-  margin: 0;
+  margin: 1rem 0;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
@@ -23,7 +23,6 @@ body {
 
 nav {
   background: #fff;
-  padding: 1em 0;
   width:100%;
   z-index: 1;
   top: 0;
@@ -36,9 +35,9 @@ nav {
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
   text-align: center;
   width: 100%;
+  margin: 1rem 0;
 }
 
 nav li {
@@ -62,26 +61,36 @@ main .container {
   max-width: 90rem;
 }
 
-#home-promo {
-  background-image: url(../images/deck1.jpg);
+.promo {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center center;
   color: #fff;
   text-align: center;
   box-sizing: border-box;
   text-shadow: 1px 1px 5px #000;
-  padding: 30vh 0 3rem;
-  min-height: 85vh;
+  padding: 20vh 0 3rem;
+  min-height: 45vh;
   position: relative
 }
 
-#home-promo .container {
-  vertical-align: bottom;
+.home.promo {
+  min-height: 85vh;
+  background-image: url(../images/deck1.jpg);
+  background-position: center bottom;
 }
 
-#home-promo .container {
-  display: inline-block;
+.about.promo {
+  background-image: url(../images/promo.jpg);
+}
+
+.services.promo {
+  background-image: url(../images/deck2.jpg);
+}
+
+.contact.promo {
+  background-image: url(../images/deck4.jpg);
+  background-position: center bottom;
 }
 
 .button {
@@ -132,7 +141,7 @@ footer {
 }
 
 
-.circles li a:before {
+i.icon {
   position: relative;
   border-radius: 50%;
   width: 100%;
@@ -143,22 +152,23 @@ footer {
   background-position: center center;
   background-size: cover;
   margin-bottom: 1rem;
+  box-sizing: border-box;
 }
 
-.decks a:before {
-  background-image: url(../images/deck2.jpg)
-}
-
-.sunrooms a:before {
-  background-image: url(../images/deck3.jpg)
-}
-
-.additions a:before {
-  background-image: url(../images/deck4.jpg)
-}
-
-.garages a:before {
+.icon.decks {
   background-image: url(../images/deck1.jpg)
+}
+
+.icon.sunrooms {
+  background-image: url(../images/sunroom.jpg)
+}
+
+.icon.additions {
+  background-image: url(../images/additions.jpg)
+}
+
+.icon.garages {
+  background-image: url(../images/garage1.jpg);
 }
 
 .row{
@@ -169,4 +179,20 @@ footer {
   .row{
     flex-direction: column
   }
+}
+
+#content > img{
+  max-width: 30%;
+}
+
+img.float-right{
+  margin: 0 0 3rem 3rem;
+}
+
+img.float-left{
+  margin: 0 3rem 3rem 0;
+}
+
+.column > img {
+  width: 100%;
 }
